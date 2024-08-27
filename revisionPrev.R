@@ -40,3 +40,9 @@ f1
 data<-read.csv(file.choose(),stringsAsFactors = TRUE, header = FALSE)
 data
 View(data)
+class(data$V1) #gives the class as factor since we used stringsAsFactors = true. if not it will return the actual class such as int,char,etc
+data<-read.csv(file.choose(),stringsAsFactors = TRUE, header = TRUE)
+data
+class(data$name)  # header = true makes the headers from the data and the accessing will be done through those names whereas in the above method, we used header=false and some random headers were given
+summary(data) #gives the statistics of the dataframe
+table(data)
