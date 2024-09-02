@@ -12,7 +12,7 @@ wbcd<-wbcd[-1] #removing the first column from the data since the ID is not usef
 table(wbcd$diagnosis)  #gives the count of unique strings 
 wbcd$diagnosis<-factor(wbcd$diagnosis,levels=c("B","M"),labels=c("Benign","Malignant"))
 View(wbcd)
-round(prop.table(table(wbcd$diagnosis))*100,digits = 1)  # prop means proportion
+round(prop.table(table(wbcd$diagnosis))*100,digits = 1)  # prop means proportion. this actually tells the proportion of the values present in the field
 summary(wbcd[c("radius_mean","area_mean","smoothness_mean")])
 normalize<-function(x){
   return((x-min(x))/(max(x)-min(x)))
