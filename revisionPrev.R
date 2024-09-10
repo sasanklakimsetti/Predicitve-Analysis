@@ -33,7 +33,7 @@ mat1%*%t(mat2)  # since the multiplication will be done only if ncol=nrow
 # create a factor for blood samples
 lev<-c('A+','A-','B+','B-','O-','O+')
 a<-c('O+','O-','O+','O-','A+','A+','A-','B+','B-','B-','A-','AB+','AB+','AB-','AB-')
-f1<-factor(a,levels = lev)
+f1<-factor(a,levels = lev,labels = c())
 f1
 
 # accessing data from dataset

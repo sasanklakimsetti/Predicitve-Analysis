@@ -8,6 +8,7 @@
 getwd()
 wbcd<-read.csv("wisc_bc_data.csv",stringsAsFactors = FALSE)
 str(wbcd) #tells the structure of the data
+View(wbcd)
 wbcd<-wbcd[-1] #removing the first column from the data since the ID is not useful for the anlaysis
 table(wbcd$diagnosis)  #gives the count of unique strings 
 wbcd$diagnosis<-factor(wbcd$diagnosis,levels=c("B","M"),labels=c("Benign","Malignant"))
