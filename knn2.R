@@ -18,7 +18,7 @@ irisd_test<-irisd_n[101:150,]
 irisd_train_labels<-irisd[1:100,5]
 irisd_test_labels<-irisd[101:150,5]
 library(class)
-irisd_test_prepd<-knn(train = irisd_train,test = irisd_test,class=irisd_train_labels,k=30)
+irisd_test_prepd<-knn(train = irisd_train,test = irisd_test,cl=irisd_train_labels,k=10)
 library(gmodels)
 CrossTable(x=irisd_test_labels,y=irisd_test_prepd,prop.chisq=FALSE)
 bb<-table(irisd_test_labels,irisd_test_prepd)
