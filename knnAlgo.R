@@ -25,6 +25,8 @@ wbcd_train<-wbcd_n[1:469,]  #using 470 samples to train
 wbcd_test<-wbcd_n[470:569,]  #using 100 samples to test
 wbcd_train_labels<-wbcd[1:469,1]
 wbcd_test_labels<-wbcd[470:569,1]
+length(wbcd_train)
+length(wbcd_train_labels)
 library(class)
 wbcd_test_prepd<-knn(train = wbcd_train, test = wbcd_test,cl=wbcd_train_labels,k=21)
 library(gmodels)
