@@ -1,3 +1,4 @@
+# linear regression: one independent and one dependent variables
 # applying linear regression model on iris dataset
 data(iris)
 head(iris)
