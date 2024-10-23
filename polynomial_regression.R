@@ -5,7 +5,7 @@ data
 # fitting linear regression model to dataset
 lin_reg<-lm(formula = Salary ~ . ,
             data=data)
-summary(lin_reg)
+summary(lin_reg)$r.squared
 
 # fitting polynomial regreesion to the data
 data$Level2=data$Level^2
@@ -19,4 +19,14 @@ poly_reg<-lm(formula = Salary ~ .,
 library(ggplot2)
 ggplot() +
   geom_point(aes(x=data$Level, y=data$Salary),color='red')+
-  geom_line()
+  geom_line(aes(x = data$Level, y = predict(poly_reg, newdata = data)),
+            colour = 'blue') +
+  ggtitle(' (Polynomial Regression)') +
+  xlab('Level') +
+  ylab('Salary')
+# Predicting a new result with Polynomial Regression
+predict(poly_reg, data.frame(Level = 6.5,
+                             Level2 = 6.5^2,
+                             Level3 = 6.5^3,
+                             Level4=6.5^4,
+                             Level5=6.5^5))

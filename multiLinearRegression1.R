@@ -14,5 +14,6 @@ ins_model<-lm(charges~ age+children+bmi+sex+smoker+region,data=insurance)
 # fits a linear regression model relating six independent variables to the total medical charges
 # tilde ~ is used to describe the dependent variable which is present before the symbol and the variables present right to the symbol are independent
 ins_predict<-predict(ins_model,data=insurance)
+ins_predict
 ins_model  # to see the estimated beta coefficients
 summary(ins_model)
