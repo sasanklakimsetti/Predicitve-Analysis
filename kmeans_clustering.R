@@ -8,7 +8,7 @@
 library(arules)
 library(cluster)
 
-# removing the initial label of the dataset i.e. name of species since this is unsupervised learning
+### removing the initial label of the dataset i.e. name of species since this is unsupervised learning
 data<-iris[,-5]
 # fitting k-means clusering model to the training dataset
 set.seed(240) #setting seed

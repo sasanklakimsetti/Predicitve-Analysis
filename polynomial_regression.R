@@ -2,6 +2,7 @@
 data<-read.csv("C://lpu//5th sem//INT234//Datasets//Position_Salaries.csv")
 data<-data[2:3]
 data
+str(data)
 # fitting linear regression model to dataset
 lin_reg<-lm(formula = Salary ~ . ,
             data=data)

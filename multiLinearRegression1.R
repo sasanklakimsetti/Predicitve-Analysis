@@ -7,7 +7,7 @@ hist(insurance$charges)  # generates a histogram for the given data values
 table(insurance$region)  #builds a contingency table of the counts at each combination of factor level
 cor(insurance[c("age","bmi","children","charges")])  # cor is used to find the correlation between the columns of x and y
 pairs(insurance[c("age","bmi","children","charges")])  # a matrix of scatterplots is produced. it is used to detest patterns among three or more variables. the relationship between age and charges displays several relatively straight lines
-install.packages("psych")  # pair.panels can be used with this
+# install.packages("psych")  # pair.panels can be used with this
 library(psych)
 pairs.panels(insurance[c("age","bmi","children","charges")])  # an enhanced scatterplot matrix can be created with pairs.panels() functions
 ins_model<-lm(charges~ age+children+bmi+sex+smoker+region,data=insurance)
